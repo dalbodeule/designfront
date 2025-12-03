@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DesignFont – 텍스트 이미지 생성기
 
-## Getting Started
+이 프로젝트는 Next.js와 Tailwind CSS를 이용해 **디자인이 좋은 텍스트 이미지를 생성하는 싱글 페이지 앱**입니다.  
+제공된 폰트들을 활용해 빠르게 타이포그래피 이미지를 만들 수 있도록 하는 것이 목표입니다.
 
-First, run the development server:
+## 기술 스택
+
+- Next.js(App Router, TypeScript)
+- Tailwind CSS
+- next/font 및 커스텀 웹폰트
+- Vercel / Cloudflare Pages 등 서버리스 배포 환경
+
+## 주요 기능(계획)
+
+- 텍스트 입력 및 실시간 미리보기
+- 여러 폰트 프리셋 전환
+- 색상, 정렬, 자간/행간 등 기본 스타일 조절
+- 캔버스 사이즈/배경색 선택
+- 결과를 이미지(PNG 등)로 내보내기
+
+자세한 기능별 진행 상황은 [`progress.md`](progress.md)에 정리합니다.
+
+## 개발 환경 설정
+
+1. 패키지 설치
+
+```bash
+npm install
+```
+
+2. 개발 서버 실행
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 열면 앱을 확인할 수 있습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+기본 진입 페이지는 [`src/app/page.tsx`](src/app/page.tsx)이며, 전역 스타일은 [`src/app/globals.css`](src/app/globals.css)에 정의됩니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 스크립트
 
-## Learn More
+- npm run dev : 개발 서버 실행
+- npm run build : 프로덕션 빌드
+- npm run start : 빌드 결과 실행
+- npm run lint : ESLint 검사
 
-To learn more about Next.js, take a look at the following resources:
+## 프로젝트 구조(요약)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+.
+├── README.md
+├── progress.md
+├── src
+│   └── app
+│       ├── page.tsx        # 메인 페이지 (싱글 페이지 앱)
+│       ├── layout.tsx      # 공통 레이아웃
+│       └── globals.css     # 전역 스타일 (Tailwind 포함 예정)
+└── public                  # 정적 리소스(아이콘, 폰트 등)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tailwind CSS 도입 계획
 
-## Deploy on Vercel
+- Tailwind CSS 설치 및 [`tailwind.config.{js,ts}`](tailwind.config.ts) 설정
+- [`src/app/globals.css`](src/app/globals.css)에 Tailwind base/components/utilities 추가
+- 공통 컬러/폰트 스케일 정의 후 컴포넌트에 단계적 적용
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 라이선스
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+이 프로젝트는 [`LICENSE.md`](LICENSE.md)의 내용을 따릅니다.
