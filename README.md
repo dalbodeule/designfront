@@ -65,6 +65,16 @@ npm run dev
 - [`src/app/globals.css`](src/app/globals.css)에 Tailwind base/components/utilities 추가
 - 공통 컬러/폰트 스케일 정의 후 컴포넌트에 단계적 적용
 
+## Fonts
+
+이 프로젝트에는 **나눔글꼴 계열 폰트들**(Nanum Gothic, Nanum Myeongjo, Nanum Square, Nanum Square Neo, Nanum Barun Gothic, Nanum Pen 등)이 포함되어 있으며,
+[`next/font/local`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#local-fonts)을 통해 [`src/app/fonts/nanum`](src/app/fonts/nanum/index.ts)에서 관리합니다.
+
+- 폰트 파일들은 네이버에서 제공하는 나눔글꼴 패키지를 기반으로 합니다.
+- 나눔글꼴은 NAVER에서 제공하며, **나눔글꼴 라이선스**를 따릅니다.
+  - 자세한 내용: https://hangeul.naver.com/font
+- 이 프로젝트의 코드는 [`LICENSE.md`](LICENSE.md)와 별개로, 포함된 폰트 파일은 각 폰트 제공처의 라이선스를 따릅니다.
+
 ## 라이선스
 
 이 프로젝트는 [`LICENSE.md`](LICENSE.md)의 내용을 따릅니다.

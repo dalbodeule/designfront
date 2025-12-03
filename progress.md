@@ -10,11 +10,14 @@
 
 ## 마일스톤
 
-- [ ] 기본 UI 와 레이아웃 구성
-- [ ] Tailwind CSS 설정 및 기본 테마 정의
-- [ ] 폰트 리소스 정리 및 로딩 방식 결정
-- [ ] 텍스트 입력/편집 기능 구현
-- [ ] 프리셋(폰트, 색상, 레이아웃) 시스템 설계
+- [x] 기본 UI 와 레이아웃 구성
+- [x] Tailwind CSS 설정 및 기본 테마 정의
+- [x] 폰트 리소스 정리 및 로딩 방식 결정
+- [x] 텍스트 입력/편집 기능 구현
+- [x] 프리셋(폰트, 색상, 레이아웃) 시스템 설계 및 적용
+- [x] SPA 라우터(AppRouter) 및 EditorScreen 분리
+- [x] 나눔글꼴(localFont) 통합 및 폰트 선택 기능 구현
+- [x] README/페이지에 나눔글꼴 포함 및 라이선스 정보 명시
 - [ ] 이미지로 내보내기(Export) 기능 구현
 
 ## 작업 로그
@@ -23,3 +26,9 @@
 
 - Next.js 템플릿 초기 세팅 확인
 - 프로젝트용 README.md 및 progress.md 작성
+- 메인 페이지를 에디터/미리보기 UI로 리디자인 (좌측 컨트롤 패널 · 우측 프리뷰)
+- Tailwind CSS(v4) 도입 및 page.module.css를 @apply 기반으로 리팩터링
+- AppRouter + EditorScreen 구조로 SPA 라우터 구성
+- 나눔글꼴 폰트 파일(`src/app/fonts/nanum`) 정리 및 `next/font/local`로 통합
+- EditorScreen에 나눔 폰트 선택 드롭다운 추가
+- README 및 에디터 푸터에 나눔글꼴 사용/라이선스 안내 문구 추가
